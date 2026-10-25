@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Custom Search</title>
+    <style>
+        /* 全体のデザイン（黒を基調としたモダンなスタイル） */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .search-container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff007f, #7f00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 検索窓のデザイン */
+        .search-box {
+            width: 100%;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            border: 2px solid #333;
+            border-radius: 30px;
+            background-color: #1e1e1e;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .search-box:focus {
+            border-color: #7f00ff;
+            box-shadow: 0 0 15px rgba(127, 0, 255, 0.5);
+        }
+
+        /* 便利リンク（ダッシュボード要素） */
+        .links-container {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .link-card {
+            background-color: #1e1e1e;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #aaa;
+            transition: background 0.2s;
+        }
+
+        .link-card:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <h1>MY SEARCH</h1>
+        <!-- 検索フォーム -->
+        <form action="https://google.com" method="get" target="_blank">
+            <input type="text" name="q" class="search-box" placeholder="キーワードを入力して検索..." autofocus autocomplete="off">
+        </form>
+
+        <!-- 将来ガジェットを置くためのスペース（例としてリンク） -->
+        <div class="links-container">
+            <a href="https://youtube.com" target="_blank" class="link-card">YouTube</a>
+            <a href="https://github.com" target="_blank" class="link-card">GitHub</a>
+        </div>
+    </div>
+
+</body>
+</html>
